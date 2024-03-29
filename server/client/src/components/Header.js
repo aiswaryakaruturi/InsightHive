@@ -9,27 +9,28 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return <li><a href="/auth/google">Login With Google</a></li>;
+        return <li><a href="/auth/google" style={{ color: 'black' }}>Login With Google</a></li>;
       default:
         return [
           <li key="1"><Payments /></li>,
-          <li key="3" style={{ margin: '0 10px' }}>
+          <li key="3" style={{ margin: '0 10px', color: 'black' }}>
             Credits: {this.props.auth.credits}
           </li>,
-          <li key="2"><a href="/api/logout">Logout</a></li>
+          <li key="2"><a href="/api/logout" style={{ color: 'black' }}>Logout</a></li>
         ];
     }
   }
 
   render() {
     return (
-      <nav>
+      <nav className="header-nav" style={{ backgroundColor: 'white', fontFamily: 'Arial, sans-serif', padding: 0 }}>
         <div className="nav-wrapper">
           <Link
             to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
+            className="brand-logo"
+            style={{ color: 'black', marginLeft: '10px', fontWeight: 'bold' }}
           >
-            Emaily
+            FeedHub
           </Link>
           <ul className="right">
             {this.renderContent()}

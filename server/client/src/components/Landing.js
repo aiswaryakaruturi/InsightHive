@@ -2,11 +2,10 @@ import React from 'react';
 
 const Landing = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>
-        Emaily!
-      </h1>
-      Collect feedback form your users
+    <div className="landing-container" style={{ textAlign: 'center' }}>
+      <h1 className="landing-heading">FeedHub</h1>
+      <h5 className="landing-subtitle">Unleashing the Opportunities!!</h5>
+      
     </div>
   );
 };

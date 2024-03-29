@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="container">
         <BrowserRouter>
-          <div>
+          <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />
